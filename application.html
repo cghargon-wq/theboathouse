@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Storage Application — The Boat House · Shreveport, LA</title>
+<style>
+:root{
+  --navy:#081c2b; --ink:#13202c; --paper:#f6f4ef; --paper2:#efece4; --steel:#3e6a85;
+  --cyan:#3ec6da; --gold:#c9a86a; --mute:#7b8b97; --red:#b3402e;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:-apple-system,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper2);-webkit-font-smoothing:antialiased}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px}
+nav{background:var(--navy);border-bottom:1px solid rgba(246,244,239,.08)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1120px}
+.brand{font-family:var(--serif);color:var(--paper);font-size:19px;letter-spacing:.06em;text-decoration:none;display:flex;align-items:center;gap:10px}
+.brand b{color:var(--gold)}
+nav a.back{color:rgba(246,244,239,.7);font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none}
+nav a.back:hover{color:var(--gold)}
+.kicker{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:#a8823f;font-weight:700}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(30px,4.6vw,44px);margin:12px 0 12px}
+.lede{color:#5d6b76;font-size:16px;line-height:1.65;max-width:40em}
+.head{padding:56px 0 34px}
+.card{background:#fff;border:1px solid #e0dacb;border-radius:20px;padding:34px;margin-bottom:22px}
+.card h2{font-family:var(--serif);font-weight:400;font-size:23px;margin-bottom:4px}
+.card .hint{font-size:13px;color:#8a8577;margin-bottom:22px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.grid .full{grid-column:1/-1}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+label{display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#6a7883;margin:0 0 6px 2px;font-weight:700}
+input,select,textarea{width:100%;padding:13px 15px;border:1px solid #d9d3c6;border-radius:10px;background:#fff;font-size:15px;font-family:var(--sans);color:var(--ink)}
+input:focus,select:focus{outline:2px solid var(--steel);border-color:transparent}
+.terms{background:#faf8f3;border:1px solid #e8e2d4;border-radius:12px;padding:18px 20px;margin-bottom:12px}
+.terms label.chk{display:flex;gap:12px;align-items:flex-start;font-size:13.5px;line-height:1.55;color:#3d4b56;text-transform:none;letter-spacing:0;font-weight:500;cursor:pointer}
+.terms input[type=checkbox]{width:18px;height:18px;margin-top:2px;flex:none;accent-color:var(--steel)}
+details{margin-top:10px;font-size:12.5px;color:#67757f;line-height:1.6}
+details summary{cursor:pointer;color:var(--steel);font-weight:600;font-size:12px;letter-spacing:.08em}
+details p{margin:8px 0}
+.rednote{color:var(--red);font-weight:600}
+.btn{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;padding:16px 34px;border-radius:100px;border:0;cursor:pointer}
+.btn:hover{box-shadow:0 8px 24px rgba(201,168,106,.4)}
+.subrow{display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding:10px 0 70px}
+.subrow small{font-size:12.5px;color:#8a8577;max-width:30em;line-height:1.5}
+.ccnote{background:#0e2a3a;color:rgba(246,244,239,.85);border-radius:12px;padding:18px 20px;font-size:13.5px;line-height:1.6}
+.ccnote b{color:var(--gold)}
+#done{display:none}
+#done .card{border-color:var(--gold)}
+.sig-row{display:grid;grid-template-columns:2fr 1fr;gap:14px}
+@media(max-width:640px){.grid,.grid3,.sig-row{grid-template-columns:1fr}.card{padding:24px}}
+@media print{nav,.subrow,.head .lede{display:none}body{background:#fff}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 100 100" style="width:28px;height:28px">
+        <circle cx="50" cy="50" r="46.5" fill="none" stroke="#c9a86a" stroke-width="1.6" stroke-dasharray="2.6 4.2" opacity=".85"/>
+        <circle cx="50" cy="50" r="36" fill="none" stroke="#c9a86a" stroke-width="10.5"/>
+        <circle cx="50" cy="50" r="36" fill="none" stroke="#0e2a3a" stroke-width="11.5" stroke-dasharray="16 40.55" transform="rotate(14.7 50 50)"/>
+        <g stroke="#f6f4ef" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M30 56.5 L36 63.5 Q50 66.8 64 63.5 L70 56.5 Z"/><path d="M41 56.5 L44.5 49 Q50 47.2 56.5 49.6 L59 56.5"/>
+        </g>
+      </svg>
+      THE <b>BOAT HOUSE</b>
+    </a>
+    <a class="back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<div class="wrap head">
+  <div class="kicker">Storage application · rev. 2026</div>
+  <h1>Apply for your space online.</h1>
+  <p class="lede">The same application as the office copy — no printing, no mailing. Submit it and the owner
+  reviews it the same day. Fields marked * are required.</p>
+</div>
+
+<form id="app" class="wrap">
+  <div class="card">
+    <h2>1 · Applicant</h2>
+    <div class="hint">Who the space will be rented to.</div>
+    <div class="grid">
+      <div><label>Full name *</label><input name="name" required></div>
+      <div><label>Email *</label><input name="email" type="email" required></div>
+      <div><label>Street address *</label><input name="street" required></div>
+      <div><label>Apt / Suite</label><input name="apt"></div>
+      <div class="full"><label>City, State &amp; ZIP *</label><input name="citystate" required placeholder="Shreveport, LA 71103"></div>
+      <div><label>Cell phone *</label><input name="cell" required></div>
+      <div><label>Home phone</label><input name="home"></div>
+      <div><label>Work phone</label><input name="work"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>2 · Authorized pickup</h2>
+    <div class="hint">People allowed to pick up your boat or vehicle (besides you). Optional — you can add them later.</div>
+    <div class="grid">
+      <div><label>Person 1 — name</label><input name="auth1"></div>
+      <div><label>Person 1 — driver's license #</label><input name="auth1dl"></div>
+      <div><label>Person 2 — name</label><input name="auth2"></div>
+      <div><label>Person 2 — driver's license #</label><input name="auth2dl"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>3 · What you're storing</h2>
+    <div class="hint">Boat first; trailer, RV, camper, jet ski, or vehicle below. Fill what applies.</div>
+    <div class="grid3">
+      <div><label>Boat make</label><input name="bmake"></div>
+      <div><label>Boat model</label><input name="bmodel"></div>
+      <div><label>Registration #</label><input name="breg"></div>
+      <div><label>Length</label><input name="blen" placeholder="ft"></div>
+      <div><label>Width</label><input name="bwid" placeholder="ft"></div>
+      <div><label>Color</label><input name="bcolor"></div>
+    </div>
+    <div style="height:14px"></div>
+    <div class="grid3">
+      <div><label>Trailer / vehicle make</label><input name="tmake"></div>
+      <div><label>Model</label><input name="tmodel"></div>
+      <div><label>License #</label><input name="tlic"></div>
+      <div><label>No. of axles</label><input name="taxles"></div>
+      <div><label>Length</label><input name="tlen" placeholder="ft"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>4 · Space &amp; start date</h2>
+    <div class="hint">Picked a stall on the <a href="index.html#map" style="color:var(--steel)">availability map</a>? It's filled in below. Otherwise leave blank and we'll fit you.</div>
+    <div class="grid3">
+      <div><label>Building · space</label><input name="space" id="f-space" placeholder="e.g. B-38"></div>
+      <div><label>Monthly rate (if known)</label><input name="rate" id="f-rate" placeholder="$"></div>
+      <div><label>Begin storage date *</label><input name="begin" type="date" required></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>5 · Terms</h2>
+    <div class="hint">The short version is below — tap "full terms" to read every word. Each box is required.</div>
+    <div class="terms"><label class="chk"><input type="checkbox" required>
+      <span><b>Quarterly billing.</b> Rent is billed quarterly (Jan 1 · Apr 1 · Jul 1 · Oct 1), due by the 10th of the quarter's first month. Partial quarters only on my first rental. No refunds for unused days after a quarter begins.</span></label></div>
+    <div class="terms"><label class="chk"><input type="checkbox" required>
+      <span><b>30-day written vacate notice.</b> I'll give written notice at least 30 days before the next billing period when leaving; a $25 in/out fee applies if I don't, or if an issued security fob isn't returned. Rates can change with 30 days written notice.</span></label></div>
+    <div class="terms"><label class="chk"><input type="checkbox" required>
+      <span><b>Stored at my sole risk.</b> I accept the default notice and hold-harmless terms of the rental agreement, and waive subrogation as written. <span class="rednote">Freeze protection is my responsibility.</span></span></label></div>
+    <div class="terms"><label class="chk"><input type="checkbox" required>
+      <span><b>Battery &amp; maintenance rules.</b> Battery disconnected; limited 10-amp charging by permission with on-board chargers only (no alligator clips); hatch raised while charging; no maintenance on the property without prior approval.</span></label></div>
+    <details>
+      <summary>Read the full terms (as printed on the office application)</summary>
+      <p><b>Billing:</b> Partial quarters are permitted for the first quarterly rental ONLY — no partial quarters thereafter. You will be billed on a quarterly basis for your storage space rental payment. This payment is due by the 10th of the first month in each quarter. Payments mailed and postmarked by the 10th are not considered late. There is no refund for unused days if you vacate after the first of the quarterly billing. When you plan to vacate, WRITTEN NOTIFICATION IS REQUIRED at least 30 days in advance of the next billing period. Billing periods are January 1st, April 1st, July 1st, October 1st. A one-time in/out processing fee of $25.00 applies if notice is not given in accordance with this application and the security fob (if issued) is not returned. The Boat House reserves the right to change storage space rates with 30 days prior written notice.</p>
+      <p><b>Default notice:</b> Upon default of any obligation under this rental agreement, you shall be denied access to the personal property contained in the rental space until the default has been remedied and the total balance paid in full. You shall be permitted access for the purpose of viewing and verifying the contents of the rental space.</p>
+      <p><b>Sole risk:</b> Property is stored at Occupant's sole risk. Occupant holds harmless The Boat House, its employees, agents, and subsidiaries from and against every claim, demand, or cause of action and any liability, costs, and expenses (including attorney's fees) for damage or loss in connection therewith, as written in the rental agreement, and waives the right of subrogation for any and all losses to Occupant's property and equipment while a tenant of The Boat House.</p>
+      <p><b>Electrical:</b> Please disconnect your battery. Limited charging by permission only; electrical connection is for 10 amps only. On-board chargers ONLY — chargers with alligator clips are not allowed. When charging, the hatch MUST be raised to allow fumes to escape. No maintenance conducted on Boat House property without prior approval. FREEZE PROTECTION IS OWNER'S RESPONSIBILITY.</p>
+    </details>
+  </div>
+
+  <div class="card">
+    <h2>6 · Signature</h2>
+    <div class="hint">Typing your full legal name below acts as your signature on this application.</div>
+    <div class="sig-row">
+      <div><label>Type your full legal name *</label><input name="sig" required placeholder="Your name, as a signature" style="font-family:var(--serif);font-style:italic;font-size:19px"></div>
+      <div><label>Date</label><input name="sigdate" id="f-date" readonly></div>
+    </div>
+    <div style="height:16px"></div>
+    <div class="ccnote"><b>About payment:</b> for your security, never send card numbers through a website form or email.
+    Credit-card authorization for quarterly auto-billing is completed <b>at move-in or by phone (318.222.6657)</b> —
+    it takes two minutes. Check or card both welcome.</div>
+  </div>
+
+  <div class="subrow">
+    <button class="btn" type="submit">Submit Application</button>
+    <small>Your application goes straight to the owner for same-day review. You'll get a copy for your records on the next screen.</small>
+  </div>
+</form>
+
+<div class="wrap" id="done">
+  <div class="card">
+    <h2>Application ready to send ✓</h2>
+    <div class="hint">Your email app just opened with the completed application addressed to the office —
+      press <b>Send</b> there to finish. A copy is below for your records.</div>
+    <pre id="copy" style="white-space:pre-wrap;font-size:12.5px;background:#faf8f3;border:1px solid #e8e2d4;border-radius:12px;padding:18px;line-height:1.6"></pre>
+    <div style="margin-top:18px;display:flex;gap:14px;flex-wrap:wrap">
+      <button class="btn" onclick="window.print()">Print / Save a Copy</button>
+      <a class="btn" style="background:#e8e2d4" href="index.html">Back to The Boat House</a>
+    </div>
+  </div>
+</div>
+
+<script>
+/* When the Samford HQ backend goes live, set SUBMIT_URL to the applications endpoint
+   and submissions will land in the HQ inbox instantly (email stays as backup). */
+const SUBMIT_URL = null;
+
+const qs = new URLSearchParams(location.search);
+if (qs.get("space")) document.getElementById("f-space").value = qs.get("space");
+if (qs.get("rate")) document.getElementById("f-rate").value = qs.get("rate");
+document.getElementById("f-date").value = new Date().toLocaleDateString("en-US");
+
+document.getElementById("app").addEventListener("submit", async e => {
+  e.preventDefault();
+  const f = new FormData(e.target), g = k => (f.get(k) || "").toString().trim() || "—";
+  const rec = {
+    submitted: new Date().toISOString(),
+    applicant: {name:g("name"), email:g("email"), street:g("street"), apt:g("apt"), citystate:g("citystate"),
+                cell:g("cell"), home:g("home"), work:g("work")},
+    authorized:[{name:g("auth1"), dl:g("auth1dl")},{name:g("auth2"), dl:g("auth2dl")}],
+    boat:{make:g("bmake"), model:g("bmodel"), reg:g("breg"), length:g("blen"), width:g("bwid"), color:g("bcolor")},
+    trailer:{make:g("tmake"), model:g("tmodel"), license:g("tlic"), axles:g("taxles"), length:g("tlen")},
+    space:g("space"), rate:g("rate"), begin:g("begin"),
+    terms_accepted:true, signature:g("sig"), sig_date:g("sigdate")
+  };
+  const text = [
+    "THE BOAT HOUSE — ONLINE STORAGE APPLICATION",
+    "Submitted: " + new Date().toLocaleString("en-US"),
+    "",
+    "APPLICANT",
+    `  Name: ${rec.applicant.name}`, `  Email: ${rec.applicant.email}`,
+    `  Address: ${rec.applicant.street} ${rec.applicant.apt !== "—" ? rec.applicant.apt : ""}, ${rec.applicant.citystate}`,
+    `  Cell: ${rec.applicant.cell} · Home: ${rec.applicant.home} · Work: ${rec.applicant.work}`,
+    "",
+    "AUTHORIZED PICKUP",
+    `  1) ${rec.authorized[0].name} — DL# ${rec.authorized[0].dl}`,
+    `  2) ${rec.authorized[1].name} — DL# ${rec.authorized[1].dl}`,
+    "",
+    "BOAT",
+    `  ${rec.boat.make} ${rec.boat.model} · Reg ${rec.boat.reg} · ${rec.boat.length} x ${rec.boat.width} · ${rec.boat.color}`,
+    "TRAILER / RV / VEHICLE",
+    `  ${rec.trailer.make} ${rec.trailer.model} · Lic ${rec.trailer.license} · ${rec.trailer.axles} axles · ${rec.trailer.length}`,
+    "",
+    "SPACE REQUEST",
+    `  Space: ${rec.space} · Rate: ${rec.rate}/mo · Begin: ${rec.begin}`,
+    "",
+    "TERMS: all four acknowledgments accepted (quarterly billing / 30-day vacate notice / sole risk & freeze / battery rules)",
+    `SIGNED (typed): ${rec.signature} — ${rec.sig_date}`,
+    "",
+    "Card authorization to be completed at move-in or by phone."
+  ].join("\n");
+
+  if (SUBMIT_URL) {
+    try { await fetch(SUBMIT_URL, {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify(rec)}); } catch(_) {}
+  }
+  location.href = "mailto:samford@freesllc.com?subject=" +
+    encodeURIComponent("ONLINE APPLICATION — " + rec.applicant.name + (rec.space !== "—" ? " — " + rec.space : "")) +
+    "&body=" + encodeURIComponent(text);
+  document.getElementById("copy").textContent = text;
+  document.getElementById("app").style.display = "none";
+  document.querySelector(".head .lede").style.display = "none";
+  document.getElementById("done").style.display = "block";
+  window.scrollTo({top:0});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Boat House — Indoor Boat & RV Storage · Shreveport, LA</title>
+<meta name="description" content="Shreveport's premier indoor boat, RV and motor coach storage. 24/7 gated access, insulated buildings, private stalls from $60/mo. 2502 Samford Avenue.">
+<style>
+:root{
+  --navy:#081c2b; --navy2:#0d2739; --ink:#13202c; --paper:#f6f4ef; --paper2:#efece4;
+  --steel:#3e6a85; --cyan:#3ec6da; --cyan-deep:#2497ab; --gold:#c9a86a; --mute:#7b8b97;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:-apple-system,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.kicker{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.btn{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;padding:15px 30px;border-radius:100px;text-decoration:none;border:0;cursor:pointer;transition:transform .15s ease, box-shadow .15s ease}
+.btn:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(201,168,106,.35)}
+.btn.ghost{background:transparent;color:var(--paper);border:1px solid rgba(246,244,239,.4)}
+.btn.ghost:hover{border-color:var(--gold);color:var(--gold);box-shadow:none}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(8,28,43,.82);backdrop-filter:blur(12px);border-bottom:1px solid rgba(246,244,239,.08)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-family:var(--serif);color:var(--paper);font-size:19px;letter-spacing:.06em;text-decoration:none;display:flex;align-items:center;gap:10px}
+.brand b{color:var(--gold)}
+.brand svg{width:26px;height:26px}
+.navlinks{display:flex;gap:26px;align-items:center}
+.navlinks a{color:rgba(246,244,239,.75);font-size:12px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none}
+.navlinks a:hover{color:var(--gold)}
+.navlinks .btn{padding:10px 20px;font-size:11px}
+@media(max-width:820px){.navlinks a:not(.btn){display:none}.navlinks .btn{padding:9px 14px;font-size:10px;letter-spacing:.1em}}
+@media(max-width:480px){.brand{font-size:15px;gap:7px}.brand svg{width:22px!important;height:22px!important}.navlinks .btn{padding:8px 11px;font-size:9px}}
+
+/* HERO — real photography, slow crossfade */
+header{position:relative;min-height:92vh;display:flex;align-items:flex-end;background:#06141f;overflow:hidden}
+.hero-media{position:absolute;inset:0}
+.hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.07);transition:opacity 2s ease}
+.hero-media img.on{opacity:1;animation:kenburns 12s linear forwards}
+@keyframes kenburns{from{transform:scale(1.07)}to{transform:scale(1)}}
+.hero-scrim{position:absolute;inset:0;background:
+  linear-gradient(180deg, rgba(8,28,43,.62) 0%, rgba(8,28,43,.35) 40%, rgba(6,20,31,.88) 82%, #06141f 100%),
+  linear-gradient(100deg, rgba(6,20,31,.55) 0%, transparent 55%)}
+@media(prefers-reduced-motion:reduce){.hero-media img.on{animation:none;transform:none}}
+.hero-inner{position:relative;z-index:2;padding-top:150px;padding-bottom:72px;width:100%}
+.hero-inner h1{font-family:var(--serif);font-weight:400;color:var(--paper);font-size:clamp(40px,6.4vw,78px);line-height:1.04;max-width:13em;margin:18px 0 22px}
+.hero-inner h1 em{font-style:italic;color:var(--gold)}
+.hero-sub{color:rgba(246,244,239,.72);font-size:17px;line-height:1.6;max-width:34em;margin-bottom:34px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:64px}
+.statstrip{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid rgba(246,244,239,.14);padding-top:26px;max-width:900px}
+.statstrip div{border-left:1px solid rgba(246,244,239,.14);padding:2px 22px}
+.statstrip div:first-child{border-left:0;padding-left:0}
+.statstrip .n{font-family:var(--serif);font-size:30px;color:var(--paper)}
+.statstrip .n span{color:var(--cyan);font-size:20px}
+.statstrip .l{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--mute);margin-top:4px}
+@media(max-width:720px){.statstrip{grid-template-columns:1fr 1fr;row-gap:22px}.statstrip div:nth-child(3){border-left:0;padding-left:0}}
+
+/* FILM STRIP — vertical shoot clips */
+#walk{padding:84px 0 90px;background:linear-gradient(180deg,#06141f 0%, var(--navy) 100%)}
+.strip{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 24px 22px;margin:0 -24px;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:rgba(201,168,106,.4) transparent}
+.strip::-webkit-scrollbar{height:6px}
+.strip::-webkit-scrollbar-thumb{background:rgba(201,168,106,.35);border-radius:3px}
+.clip{flex:0 0 auto;width:min(64vw,272px);scroll-snap-align:center;position:relative;border-radius:16px;overflow:hidden;border:1px solid rgba(246,244,239,.12);background:#0a1f2f}
+.clip video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover}
+.clip .tag{position:absolute;left:12px;bottom:12px;right:12px;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--paper);background:rgba(8,28,43,.72);backdrop-filter:blur(6px);border:1px solid rgba(201,168,106,.35);border-radius:100px;padding:8px 14px;text-align:center}
+.strip-hint{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(246,244,239,.4);margin-top:4px}
+
+/* COLLECTION GALLERY */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gal figure{position:relative;border-radius:14px;overflow:hidden;border:1px solid rgba(246,244,239,.1);cursor:zoom-in;background:#0a1f2f}
+.gal img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .5s ease}
+.gal figure:hover img{transform:scale(1.05)}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 12px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(246,244,239,.9);background:linear-gradient(180deg,transparent, rgba(6,20,31,.85))}
+@media(max-width:900px){.gal{grid-template-columns:1fr 1fr}}
+.lightbox{position:fixed;inset:0;z-index:80;background:rgba(4,12,19,.94);display:none;align-items:center;justify-content:center;padding:4vh 4vw;cursor:zoom-out}
+.lightbox.open{display:flex}
+.lightbox img{max-width:100%;max-height:92vh;border-radius:10px;box-shadow:0 30px 90px rgba(0,0,0,.6)}
+
+/* PHOTO BAND */
+.band{position:relative;min-height:52vh;background-size:cover;background-position:center;display:flex;align-items:flex-end}
+.band::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(6,20,31,.25), rgba(6,20,31,.7))}
+.band .cap{position:relative;z-index:1;padding:0 0 34px}
+.band .cap .kicker{color:var(--gold)}
+.band .cap p{font-family:var(--serif);color:var(--paper);font-size:clamp(20px,2.6vw,28px);max-width:22em;margin-top:8px}
+
+/* SECURITY */
+.secgrid{display:grid;grid-template-columns:1.35fr 1fr;gap:16px}
+.secgrid .shot{position:relative;border-radius:16px;overflow:hidden;border:1px solid rgba(246,244,239,.1);min-height:280px}
+.secgrid .shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.secgrid .shot .cap{position:absolute;left:0;right:0;bottom:0;padding:30px 18px 14px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(246,244,239,.9);background:linear-gradient(180deg,transparent, rgba(6,20,31,.85))}
+.secgrid .col{display:grid;gap:16px}
+.seclist{margin-top:40px;display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.seclist h3{font-size:13.5px;letter-spacing:.04em;color:var(--paper);margin-bottom:6px}
+.seclist p{font-size:13px;color:rgba(246,244,239,.6);line-height:1.6}
+.seclist .no{font-family:var(--serif);font-size:15px;color:var(--gold);margin-bottom:10px;display:block}
+@media(max-width:860px){.secgrid{grid-template-columns:1fr}.seclist{grid-template-columns:1fr 1fr}}
+
+/* SECTIONS */
+section{padding:96px 0}
+.sec-head{max-width:640px;margin-bottom:52px}
+.sec-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(30px,4vw,44px);line-height:1.12;margin:14px 0 16px}
+.sec-head p{color:#4c5b66;font-size:16px;line-height:1.65}
+.dark{background:linear-gradient(180deg,var(--navy) 0%, #06141f 100%);color:var(--paper)}
+.dark .sec-head h2{color:var(--paper)}
+.dark .sec-head p{color:rgba(246,244,239,.65)}
+
+/* AMENITIES */
+.amen{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.amen div{background:#fff;border:1px solid #e5e0d5;border-radius:14px;padding:24px 20px}
+.amen svg{width:26px;height:26px;stroke:var(--steel)}
+.amen h3{font-size:14.5px;margin:12px 0 6px;font-weight:700;letter-spacing:.02em}
+.amen p{font-size:13px;color:#67757f;line-height:1.55}
+@media(max-width:900px){.amen{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.amen{grid-template-columns:1fr}}
+
+/* RATE CARDS */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{position:relative;background:linear-gradient(180deg,#0f2b3f 0%, #0a1f2f 100%);border:1px solid rgba(246,244,239,.1);border-radius:18px;padding:0 0 26px;display:flex;flex-direction:column;overflow:hidden}
+.card .ph{width:100%;aspect-ratio:16/8.5;object-fit:cover;display:block;border-bottom:1px solid rgba(201,168,106,.25)}
+.card .body{padding:22px 26px 0;display:flex;flex-direction:column;flex:1}
+.card::after{content:"";position:absolute;right:-40px;top:-40px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle, rgba(62,198,218,.12), transparent 70%)}
+.card .cls{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--cyan)}
+.card h3{font-family:var(--serif);font-weight:400;font-size:25px;margin:10px 0 4px;color:var(--paper)}
+.card .spec{font-size:13px;color:rgba(246,244,239,.6);line-height:1.7;margin-bottom:18px}
+.card .price{font-family:var(--serif);font-size:34px;color:var(--gold);margin-top:auto}
+.card .price small{font-family:var(--sans);font-size:12px;color:rgba(246,244,239,.55);letter-spacing:.06em}
+.card .avail{margin-top:14px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+.card .avail.yes{color:var(--cyan)}
+.card .avail.no{color:rgba(246,244,239,.4)}
+.card .avail .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:currentColor;margin-right:8px;vertical-align:1px}
+.card .avail.yes .dot{box-shadow:0 0 10px var(--cyan)}
+@media(max-width:900px){.cards{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.cards{grid-template-columns:1fr}}
+
+/* MAP */
+.maplegend{display:flex;gap:26px;margin-bottom:26px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(246,244,239,.65);flex-wrap:wrap}
+.maplegend span{display:flex;align-items:center;gap:9px}
+.chip{width:14px;height:14px;border-radius:4px}
+.chip.occ{background:#1c3a4e;border:1px solid rgba(246,244,239,.15)}
+.chip.vac{background:var(--cyan);box-shadow:0 0 10px rgba(62,198,218,.7)}
+.addr-group{margin-bottom:40px}
+.addr-group>.addr{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid rgba(246,244,239,.12);padding-bottom:10px;margin-bottom:20px}
+.bgrid{display:flex;flex-wrap:wrap;gap:18px}
+.bldg{background:rgba(15,43,63,.55);border:1px solid rgba(246,244,239,.1);border-radius:14px;padding:16px 16px 14px}
+.bldg h4{font-family:var(--serif);font-weight:400;font-size:16px;color:var(--paper);margin-bottom:2px}
+.bldg .sub{font-size:10.5px;color:rgba(246,244,239,.45);letter-spacing:.08em;margin-bottom:12px}
+.stalls{display:grid;gap:5px}
+.stall{width:34px;height:34px;border-radius:6px;background:#1c3a4e;border:1px solid rgba(246,244,239,.12);color:rgba(246,244,239,.55);font-size:9.5px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .12s ease;user-select:none}
+.stall:hover{transform:scale(1.12);color:var(--paper);border-color:var(--gold);z-index:2}
+.stall.vac{background:var(--cyan);color:var(--navy);font-weight:700;border-color:transparent;box-shadow:0 0 12px rgba(62,198,218,.55);animation:pulse 2.4s infinite}
+.stall.sel{outline:2px solid var(--gold);outline-offset:1px}
+@keyframes pulse{0%,100%{box-shadow:0 0 6px rgba(62,198,218,.35)}50%{box-shadow:0 0 16px rgba(62,198,218,.8)}}
+
+/* DRAWER */
+.drawer{position:fixed;right:20px;bottom:20px;width:330px;max-width:calc(100vw - 40px);background:linear-gradient(180deg,#10314a,#0a2234);border:1px solid rgba(201,168,106,.4);border-radius:18px;padding:24px;z-index:60;box-shadow:0 24px 60px rgba(0,0,0,.5);display:none}
+.drawer.open{display:block;animation:rise .2s ease}
+@keyframes rise{from{transform:translateY(14px);opacity:0}to{transform:none;opacity:1}}
+.drawer .x{position:absolute;top:12px;right:16px;background:none;border:0;color:rgba(246,244,239,.5);font-size:20px;cursor:pointer}
+.drawer .cls{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan)}
+.drawer h3{font-family:var(--serif);font-weight:400;font-size:30px;color:var(--paper);margin:6px 0 2px}
+.drawer .st{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;margin-bottom:14px}
+.drawer .st.vac{color:var(--cyan)}.drawer .st.occ{color:rgba(246,244,239,.45)}
+.drawer dl{font-size:13px;color:rgba(246,244,239,.75);line-height:1.9;margin-bottom:16px}
+.drawer dt{float:left;clear:left;width:88px;color:rgba(246,244,239,.42);font-size:11px;letter-spacing:.1em;text-transform:uppercase;line-height:2.25}
+.drawer .btn{width:100%;text-align:center}
+
+/* FORM */
+.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.formgrid .full{grid-column:1 / -1}
+label{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6a7883;margin:0 0 6px 2px;font-weight:700}
+input,select,textarea{width:100%;padding:14px 16px;border:1px solid #d9d3c6;border-radius:10px;background:#fff;font-size:15px;font-family:var(--sans);color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--steel);border-color:transparent}
+.formcard{background:#fff;border:1px solid #e5e0d5;border-radius:20px;padding:36px;max-width:760px}
+.formnote{font-size:13px;color:#8a8577;margin-top:14px;line-height:1.6}
+@media(max-width:640px){.formgrid{grid-template-columns:1fr}.formcard{padding:26px}}
+
+/* LEGACY */
+#legacy{background:#fff;border-top:1px solid #e5e0d5;border-bottom:1px solid #e5e0d5}
+.legacy-split{display:grid;grid-template-columns:1fr 1.3fr;gap:56px;align-items:center}
+.legacy-split .signfig{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 24px 60px rgba(8,28,43,.18)}
+.legacy-split .signfig img{display:block;width:100%}
+.legacy-split .signfig figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 18px 14px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(246,244,239,.95);background:linear-gradient(180deg,transparent, rgba(6,20,31,.8))}
+@media(max-width:860px){.legacy-split{grid-template-columns:1fr;gap:36px}.legacy-split .signfig{max-width:420px}}
+.legacy-split .legacy-stats{gap:14px}
+.legacy-split .legacy-stats .n{font-size:44px}
+.legacy-split .legacy-stats>div{padding-left:18px}
+.legacy-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:860px}
+.legacy-stats>div{border-left:3px solid var(--gold);padding:6px 0 6px 26px}
+.legacy-stats .n{font-family:var(--serif);font-size:64px;line-height:1;color:var(--navy)}
+.legacy-stats .n small{font-family:var(--sans);font-size:15px;color:var(--mute);letter-spacing:.08em}
+.legacy-stats .l{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#6a7883;margin-top:10px;line-height:1.6}
+.legacy-note{margin-top:34px;font-size:13px;color:#8a8577;font-style:italic}
+@media(max-width:720px){.legacy-stats{grid-template-columns:1fr;gap:26px}}
+
+/* SERVICES */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.svc>div{background:#fff;border:1px solid #e0dacb;border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.svc .ph{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+.svc .txt{padding:26px 28px 30px}
+.svc svg{width:30px;height:30px;stroke:var(--steel)}
+.svc h3{font-family:var(--serif);font-weight:400;font-size:22px;margin:12px 0 8px}
+.svc p{font-size:14px;color:#5d6b76;line-height:1.65}
+@media(max-width:760px){.svc{grid-template-columns:1fr}}
+
+/* LOCATION */
+.loc{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.loc .card2{background:#fff;border:1px solid #e5e0d5;border-radius:16px;padding:28px}
+.loc h3{font-family:var(--serif);font-weight:400;font-size:21px;margin-bottom:10px}
+.loc p, .loc li{font-size:14.5px;line-height:1.8;color:#4c5b66}
+.loc ol{padding-left:20px}
+.loc a{color:var(--steel);font-weight:600}
+@media(max-width:760px){.loc{grid-template-columns:1fr}}
+
+footer{background:#06141f;color:rgba(246,244,239,.55);padding:56px 0 40px;font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+footer .brand{font-size:17px;margin-bottom:10px}
+footer a{color:rgba(246,244,239,.75);text-decoration:none}
+footer a:hover{color:var(--gold)}
+footer .fine{margin-top:26px;font-size:11.5px;color:rgba(246,244,239,.32);width:100%}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 100 100" style="width:30px;height:30px">
+        <circle cx="50" cy="50" r="46.5" fill="none" stroke="#c9a86a" stroke-width="1.6" stroke-dasharray="2.6 4.2" opacity=".85"/>
+        <circle cx="50" cy="50" r="36" fill="none" stroke="#c9a86a" stroke-width="10.5"/>
+        <circle cx="50" cy="50" r="36" fill="none" stroke="#0e2a3a" stroke-width="11.5" stroke-dasharray="16 40.55" transform="rotate(14.7 50 50)"/>
+        <g stroke="#f6f4ef" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M30 56.5 L36 63.5 Q50 66.8 64 63.5 L70 56.5 Z"/>
+          <path d="M41 56.5 L44.5 49 Q50 47.2 56.5 49.6 L59 56.5"/>
+        </g>
+      </svg>
+      THE <b>BOAT HOUSE</b>
+    </a>
+    <div class="navlinks">
+      <a href="#walk">Tour</a>
+      <a href="#why">Why Inside</a>
+      <a href="#collection">The Collection</a>
+      <a href="#services">Services</a>
+      <a href="#spaces">Spaces &amp; Rates</a>
+      <a href="#map">Find Your Stall</a>
+      <a href="#visit">Visit</a>
+      <a class="btn" href="#reserve">Reserve a Stall</a>
+    </div>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="hero-media" id="heromedia">
+    <img class="on" src="media/hero-mastercraft.jpg" alt="A MasterCraft ski boat stored inside The Boat House's brick warehouse" fetchpriority="high">
+    <img data-src="media/hero-coach.jpg" alt="A luxury motor coach parked in its private insulated building">
+    <img data-src="media/hero-lane.jpg" alt="The concrete drive between storage buildings at 2502 Samford Avenue">
+  </div>
+  <div class="hero-scrim"></div>
+  <div class="wrap hero-inner">
+    <div class="kicker">Shreveport · Indoor Boat & RV Storage · Est. on Samford Avenue</div>
+    <h1>Your boat deserves<br>to sleep <em>indoors.</em></h1>
+    <p class="hero-sub">Insulated buildings, private stalls, an on-site manager, valet pull-in and out, and repairs by The Boat Shop without leaving the property. The Boat House has protected Shreveport's boats, motor coaches, and classics for over 25 years — minutes from I-20 and I-49.</p>
+    <div class="hero-cta">
+      <a class="btn" href="#map">Check Live Availability</a>
+      <a class="btn ghost" href="tel:3182226657">Call 318.222.6657</a>
+    </div>
+    <div class="statstrip">
+      <div><div class="n" id="stat-spaces">—</div><div class="l">Indoor &amp; yard spaces</div></div>
+      <div><div class="n">24<span>/7</span></div><div class="l">Gated card access</div></div>
+      <div><div class="n" id="stat-avail">—</div><div class="l">Available today</div></div>
+      <div><div class="n"><span style="color:var(--gold)">$</span>60<span>+</span></div><div class="l">Per month</div></div>
+    </div>
+  </div>
+</header>
+
+<section id="walk" class="dark">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:34px">
+      <div class="kicker">Shot on the property · July 2026</div>
+      <h2>Walk it with us.</h2>
+      <p>No stock footage, no renderings — this is the actual facility, the actual gate, the actual crew moving actual boats.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="strip" id="strip">
+      <div class="clip"><video muted loop playsinline preload="none" poster="media/walk-hall-poster.jpg" data-src="media/walk-hall.mp4" aria-label="Panning view inside the main boat hall"></video><div class="tag">The Boat House Floor</div></div>
+      <div class="clip"><video muted loop playsinline preload="none" poster="media/walk-valet-poster.jpg" data-src="media/walk-valet.mp4" aria-label="Boats staged inside the warehouse"></video><div class="tag">Valet Staging</div></div>
+      <div class="clip"><video muted loop playsinline preload="none" poster="media/walk-coach-poster.jpg" data-src="media/walk-coach.mp4" aria-label="A motor coach in its private bay"></video><div class="tag">Motor Coach Bays</div></div>
+      <div class="clip"><video muted loop playsinline preload="none" poster="media/walk-shop-poster.jpg" data-src="media/walk-shop.mp4" aria-label="The Boat Shop service entrance"></video><div class="tag">The Boat Shop</div></div>
+      <div class="clip"><video muted loop playsinline preload="none" poster="media/walk-gate-poster.jpg" data-src="media/walk-gate.mp4" aria-label="Card reader and call box at the front gate"></video><div class="tag">Card-Key Entry</div></div>
+      <div class="clip"><video muted loop playsinline preload="none" poster="media/walk-sign-poster.jpg" data-src="media/walk-sign.mp4" aria-label="The Boat House sign on Samford Avenue"></video><div class="tag">Samford Avenue</div></div>
+    </div>
+    <div class="strip-hint">Drag to explore →</div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Why inside storage</div>
+      <h2>Sun, heat, and weather are eating your investment. We stop them.</h2>
+      <p>Indoor storage preserves resale value, protects electronics and upholstery, and extends the life of paint, hull, and tires. Every building includes:</p>
+    </div>
+    <div class="amen">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg><h3>UV &amp; Weather Protection</h3><p>Out of the sun, rain, and Louisiana heat — interiors, gelcoat, and tires last years longer.</p></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><rect x="3" y="10" width="18" height="10" rx="1"/><path d="M3 10l9-6 9 6"/></svg><h3>Insulated Roof + Skylights</h3><p>Cooler stalls in summer, natural light all day.</p></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg><h3>Power at Your Stall</h3><p>Electrical outlets for chargers and battery tenders; water access on site.</p></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 3v18M4 9h16"/></svg><h3>Private Overhead Doors</h3><p>Newer stalls have their own overhead door — drive in, close it, done.</p></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg><h3>Controlled Security Gate</h3><p>Swipe &amp; proximity cards get you in without leaving your vehicle.</p></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 8h.01M12 8h.01M16 8h.01M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/></svg><h3>Keypad Entry &amp; Exit</h3><p>Coded access at every point, day or night.</p></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><h3>24/7 Access</h3><p>Your boat, your schedule — seven days, around the clock.</p></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><rect x="2" y="6" width="13" height="10" rx="2"/><path d="M15 10l7-3v10l-7-3"/><circle cx="8" cy="11" r="2.4"/></svg><h3>Security Cameras</h3><p>Camera coverage across the facility backs up the gate, the keypads, and the on-site manager.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="collection" class="dark">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">The collection</div>
+      <h2>Your boat will be in good company.</h2>
+      <p>Wake boats, offshore hulls, motor coaches, classics under cover, even a '60s Shasta — a look at what already
+      sleeps inside these buildings, photographed right in their stalls.</p>
+    </div>
+    <div class="gal" id="gal">
+      <figure><img loading="lazy" decoding="async" src="media/collection-mastercraft.jpg" alt="MasterCraft XT wake boat in its indoor stall"><figcaption>MasterCraft XT · wake boat</figcaption></figure>
+      <figure><img loading="lazy" decoding="async" src="media/collection-pontoon.jpg" alt="Luxury tritoon under the steel trusses"><figcaption>Luxury tritoon</figcaption></figure>
+      <figure><img loading="lazy" decoding="async" src="media/collection-mp3000.jpg" alt="MP3000 offshore performance boat on a triple-axle trailer"><figcaption>Offshore performance</figcaption></figure>
+      <figure><img loading="lazy" decoding="async" src="media/collection-malibu.jpg" alt="Malibu wake boat with tower lights"><figcaption>Malibu · tournament rig</figcaption></figure>
+      <figure><img loading="lazy" decoding="async" src="media/collection-console.jpg" alt="Center-console offshore boat under clerestory windows"><figcaption>Center console</figcaption></figure>
+      <figure><img loading="lazy" decoding="async" src="media/collection-shasta.jpg" alt="Restored vintage Shasta travel trailer"><figcaption>'60s Shasta · restored</figcaption></figure>
+      <figure><img loading="lazy" decoding="async" src="media/collection-classic.jpg" alt="Classic truck under a fitted cover in the Bollinger garage"><figcaption>Classic · under cover</figcaption></figure>
+      <figure><img loading="lazy" decoding="async" src="media/collection-moto.jpg" alt="Motorcycle under a fitted cover along the brick wall"><figcaption>Two wheels welcome</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="services" style="background:var(--paper2);padding-top:88px;padding-bottom:88px">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Full service</div>
+      <h2>More than a parking spot.</h2>
+      <p>Most storage lots hand you a gate code and wish you luck. The Boat House is staffed, serviced, and watched.</p>
+    </div>
+    <div class="svc">
+      <div>
+        <img class="ph" loading="lazy" decoding="async" src="media/svc-office.jpg" alt="The Building A office at 2502 Samford Avenue">
+        <div class="txt">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg>
+        <h3>On-Site Manager</h3>
+        <p>A real person on the property — questions answered, deliveries met, and another set of eyes on your boat every day.</p>
+        </div>
+      </div>
+      <div>
+        <img class="ph" loading="lazy" decoding="async" src="media/svc-valet.jpg" alt="The stall tug that moves boats in and out of the warehouse">
+        <div class="txt">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M4 15h16l-2 4H6l-2-4zM7 15V9a2 2 0 012-2h6a2 2 0 012 2v6"/><path d="M12 3v4M9 7l3-2 3 2"/></svg>
+        <h3>Valet In &amp; Out</h3>
+        <p>Call ahead and we'll pull your boat out and have it waiting up front — then tuck it back in when your day on the water is done. Our tugs and forklifts do the tight maneuvering, not your truck.</p>
+        </div>
+      </div>
+      <div>
+        <img class="ph" loading="lazy" decoding="async" src="media/svc-shop.jpg" alt="Inside The Boat Shop — Yamaha, Suzuki and Mercury service on the property">
+        <div class="txt">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 005.4-5.4L15 12l-3-3 2.7-2.7z"/></svg>
+        <h3>On-Site Boat Repairs</h3>
+        <p>The Boat Shop operates right on the property — service, maintenance, and repairs without your boat ever leaving home.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="security" class="dark">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Security</div>
+      <h2>Four layers between the street and your boat.</h2>
+      <p>Everything in these photos is on the property today — walk it before you sign and count the cameras yourself.</p>
+    </div>
+    <div class="secgrid">
+      <div class="shot"><img loading="lazy" decoding="async" src="media/gate-front.jpg" alt="The steel front gate between Buildings N and D, topped with barbed wire"><div class="cap">Steel gates · barbed-wire perimeter</div></div>
+      <div class="col">
+        <div class="shot"><img loading="lazy" decoding="async" src="media/sec-camera.jpg" alt="Security camera and floodlight on the corner of Building E"><div class="cap">Cameras + floodlights on every building</div></div>
+        <div class="shot"><img loading="lazy" decoding="async" src="media/sec-keypad.jpg" alt="Card reader, keypad and call box at the front gate"><div class="cap">Card-key gates · call box to the manager</div></div>
+      </div>
+    </div>
+    <div class="seclist">
+      <div><span class="no">01</span><h3>Fenced &amp; wired perimeter</h3><p>Chain-link and steel fencing topped with barbed wire around every address.</p></div>
+      <div><span class="no">02</span><h3>Coded gates, in and out</h3><p>Swipe cards and keypads at every entry — access logs, not guesswork.</p></div>
+      <div><span class="no">03</span><h3>Cameras across the facility</h3><p>Building corners, gates, and halls — recorded around the clock.</p></div>
+      <div><span class="no">04</span><h3>A manager on the ground</h3><p>The strongest layer isn't hardware — it's Roger, on site, who knows every boat and every face.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="legacy">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:44px">
+      <div class="kicker">Since 1998 · Family-owned</div>
+      <h2>Familiar faces — theirs and ours.</h2>
+    </div>
+    <div class="legacy-split">
+      <figure class="signfig">
+        <img loading="lazy" decoding="async" src="media/sign.jpg" alt="The Boat House sign on Samford Avenue — 24 hr boat and RV storage, inside and outside">
+        <figcaption>The sign on Samford Avenue — same family behind it since 1998</figcaption>
+      </figure>
+      <div>
+        <p style="color:#4c5b66;font-size:16px;line-height:1.65;margin-bottom:34px">Storage is a trust business, and trust shows up in the numbers. Our tenants stay for years, not seasons —
+        and the crew that pulls your boat out this summer is the same crew that pulled it out last summer.
+        The person at the gate knows your name, your boat, and how you like it parked.</p>
+        <div class="legacy-stats">
+          <div><div class="n"><span id="lg-avg">—</span><small> yrs</small></div><div class="l">Average tenant<br>stays with us</div></div>
+          <div><div class="n"><span id="lg-ten">—</span></div><div class="l">Tenants storing here<br>a decade or longer</div></div>
+          <div><div class="n"><span id="lg-long">—</span><small> yrs</small></div><div class="l">Our longest tenant —<br>with us since <span id="lg-since">—</span></div></div>
+        </div>
+        <p class="legacy-note">Numbers straight from our rent ledger — not a marketing estimate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="spaces" class="dark">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Spaces &amp; rates</div>
+      <h2>From jet skis to 45-foot coaches.</h2>
+      <p>Six classes of storage across three gated properties. Short-term stays add $25/month. Electricity available in every building.</p>
+    </div>
+    <div class="cards" id="ratecards"></div>
+  </div>
+</section>
+
+<section id="map" class="dark" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Find your stall</div>
+      <h2>Every stall, live.</h2>
+      <p>Glowing stalls are open today. Click any space to see its size, rate, and availability — then reserve it before someone else does.</p>
+    </div>
+    <div class="maplegend">
+      <span><span class="chip vac"></span> Available — reserve it</span>
+      <span><span class="chip occ"></span> Occupied</span>
+    </div>
+    <div id="facmap"></div>
+  </div>
+</section>
+
+<div class="drawer" id="drawer">
+  <button class="x" onclick="closeDrawer()">×</button>
+  <div class="cls" id="d-cls">—</div>
+  <h3 id="d-id">—</h3>
+  <div class="st" id="d-st">—</div>
+  <dl>
+    <dt>Door</dt><dd id="d-door">—</dd>
+    <dt>Depth</dt><dd id="d-depth">—</dd>
+    <dt>Rate</dt><dd id="d-rate">—</dd>
+    <dt>Address</dt><dd id="d-addr">—</dd>
+  </dl>
+  <a class="btn" id="d-btn" href="#reserve">Reserve this stall</a>
+</div>
+
+<div class="band" style="background-image:url('media/band-boats.jpg')" role="img" aria-label="Four boats staged outside Building E, ready for pickup">
+  <div class="wrap cap">
+    <div class="kicker">Saturday morning, staged</div>
+    <p>Call ahead — your boat is out, hooked up, and pointed at the lake before you arrive.</p>
+  </div>
+</div>
+
+<section id="reserve">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Reserve a stall</div>
+      <h2>Sixty seconds. We call you back the same day.</h2>
+      <p>Tell us what you're storing. The owner approves every application personally — no bots, no runaround.
+         Class full? The same form joins the waitlist, and we call the moment a stall opens.</p>
+    </div>
+    <div class="formcard">
+      <form id="resform">
+        <div class="formgrid">
+          <div><label>Your name</label><input name="name" required placeholder="First and last name"></div>
+          <div><label>Phone</label><input name="phone" required placeholder="318.___.____"></div>
+          <div class="full"><label>Email</label><input name="email" type="email" placeholder="you@example.com"></div>
+          <div><label>What are you storing?</label>
+            <select name="kind"><option>Boat</option><option>Pontoon / barge</option><option>Motor coach / RV</option><option>Travel trailer</option><option>Jet ski</option><option>Classic car</option><option>Trailer / other</option></select>
+          </div>
+          <div><label>Length (feet)</label><input name="length" placeholder="e.g. 23"></div>
+          <div class="full"><label>Preferred space</label><input name="space" id="f-space" placeholder="Not sure? Leave blank — we'll fit you."></div>
+          <div class="full"><label>Anything else?</label><textarea name="msg" rows="3" placeholder="Timing, second unit, questions…"></textarea></div>
+        </div>
+        <div style="margin-top:22px;display:flex;align-items:center;gap:18px;flex-wrap:wrap">
+          <button class="btn" type="submit">Send Reservation Request</button>
+          <span style="font-size:13px;color:#8a8577">or call <a href="tel:3182226657" style="color:var(--steel);font-weight:700">318.222.6657</a></span>
+        </div>
+        <p class="formnote">Ready to commit? <a href="application.html" style="color:var(--steel);font-weight:700">Complete the full storage application online →</a><br>
+        Prefer paper? Stop by the office at 2502 Samford Avenue. After-hours: 318.658.1746 or 318.349.0673.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="visit" style="background:var(--paper2)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Visit</div>
+      <h2>Minutes from I-20 and I-49.</h2>
+    </div>
+    <div class="loc">
+      <div class="card2">
+        <h3>The Boat House</h3>
+        <p><b>2502 Samford Avenue</b><br>Shreveport, LA 71103<br><br>
+        Also: classic-car &amp; small-craft garage at <b>1332 Bollinger Ave</b> · gated outside yard at <b>2614 Samford Ave</b>.<br><br>
+        <a href="https://maps.apple.com/?q=2502+Samford+Avenue+Shreveport+LA">Open in Maps →</a></p>
+      </div>
+      <div class="card2">
+        <h3>From I-20 Eastbound</h3>
+        <ol>
+          <li>Take the Lakeshore Dr exit (17A) toward Linwood Ave</li>
+          <li>Keep right at the fork onto Lakeshore Dr — 0.3 mi</li>
+          <li>Left onto US-79 / US-80 / Texas Ave — 0.2 mi</li>
+          <li>Right onto Linwood Ave — 0.4 mi</li>
+          <li>Left onto Dalzell St, then right onto Samford Ave</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="brand">THE <b>BOAT HOUSE</b></div>
+      <p>Samford Properties, LLC dba The Boat House<br>2502 Samford Avenue, Shreveport, LA 71103</p>
+    </div>
+    <div>
+      <p>Office: <a href="tel:3182226657">318.222.6657</a><br>
+      After hours: <a href="tel:3186581746">318.658.1746</a> · <a href="tel:3183490673">318.349.0673</a><br>
+      <a href="mailto:samford@freesllc.com">samford@freesllc.com</a></p>
+    </div>
+    <p class="fine">© 2026 Samford Properties, LLC. All rights reserved. · Availability shown is updated from the office ledger; final assignment confirmed on approval.</p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" onclick="this.classList.remove('open')"><img id="lb-img" alt=""></div>
+
+<script>
+const DATA = {"stats":{"avg_years":6.9,"ten_plus":52,"longest":28,"since":1998},"buildings":{"P":{"label":"Building P","address":"2502 Samford Ave","type":"private","door":"12'w \u00d7 14'h","depth":"50' deep","note":"Fits large motor homes & RVs"},"H":{"label":"Building H","address":"2502 Samford Ave","type":"private","door":"12'w \u00d7 14'h","depth":"50' deep","note":"Fits large motor homes & RVs"},"I":{"label":"Building I","address":"2502 Samford Ave","type":"private","door":"12'w \u00d7 14'h","depth":"50' deep","note":"Same class as Building H"},"M":{"label":"Building M","address":"2502 Samford Ave","type":"private","door":"12'w \u00d7 14'h","depth":"50' deep","note":"Large private stalls"},"F":{"label":"Building F","address":"2502 Samford Ave","type":"private","door":"12'w \u00d7 14'h","depth":"40' deep","note":"Fits fly bridges & tall boats"},"G":{"label":"Building G","address":"2502 Samford Ave","type":"private","door":"10'w \u00d7 12'h","depth":"36' deep","note":"Private mid-size stalls"},"E":{"label":"Building E","address":"2502 Samford Ave","type":"private","door":"10'w \u00d7 12'h","depth":"36' deep","note":"Private mid-size stalls"},"B":{"label":"Building B","address":"2502 Samford Ave","type":"common","door":"Shared entry","depth":"Boats to ~29'","note":"Main boat house floor"},"N":{"label":"Building N","address":"2502 Samford Ave","type":"common","door":"Shared entry","depth":"Boats to ~25'","note":"Main boat house floor"},"O":{"label":"Building O","address":"2502 Samford Ave","type":"common","door":"Shared entry","depth":"Boats to ~21' (rows 1\u201312)","note":"21' and smaller preferred"},"J":{"label":"Building J","address":"1332 Bollinger Ave","type":"private","door":"8'6\" roll-up","depth":"Cars & small boats","note":"No wake towers \u2014 classic-car favorite"},"L":{"label":"Outside Lot L","address":"2614 Samford Ave","type":"outside","door":"Open yard","depth":"Trailer & rig parking","note":"Gated outside truck yard"}},"spaces":[{"id":"B-0","building":"B","space":"0","status":"occupied","rate_monthly":137.5},{"id":"B-1","building":"B","space":"1","status":"occupied","rate_monthly":137.5},{"id":"B-2","building":"B","space":"2","status":"occupied","rate_monthly":137.5},{"id":"B-3","building":"B","space":"3","status":"occupied","rate_monthly":137.5},{"id":"B-4","building":"B","space":"4","status":"occupied","rate_monthly":137.5},{"id":"B-5","building":"B","space":"5","status":"occupied","rate_monthly":137.5},{"id":"B-6","building":"B","space":"6","status":"occupied","rate_monthly":137.5},{"id":"B-7","building":"B","space":"7","status":"occupied","rate_monthly":137.5},{"id":"B-8","building":"B","space":"8","status":"occupied","rate_monthly":137.5},{"id":"B-9","building":"B","space":"9","status":"occupied","rate_monthly":137.5},{"id":"B-10","building":"B","space":"10","status":"occupied","rate_monthly":137.5},{"id":"B-11","building":"B","space":"11","status":"vacant","rate_monthly":137.5},{"id":"B-12","building":"B","space":"12","status":"occupied","rate_monthly":137.5},{"id":"B-13","building":"B","space":"13","status":"occupied","rate_monthly":137.5},{"id":"B-14","building":"B","space":"14","status":"occupied","rate_monthly":137.5},{"id":"B-15","building":"B","space":"15","status":"occupied","rate_monthly":137.5},{"id":"B-16","building":"B","space":"16","status":"occupied","rate_monthly":137.5},{"id":"B-17","building":"B","space":"17","status":"occupied","rate_monthly":137.5},{"id":"B-18","building":"B","space":"18","status":"occupied","rate_monthly":137.5},{"id":"B-19","building":"B","space":"19","status":"occupied","rate_monthly":137.5},{"id":"B-20","building":"B","space":"20","status":"occupied","rate_monthly":137.5},{"id":"B-21","building":"B","space":"21","status":"occupied","rate_monthly":137.5},{"id":"B-22","building":"B","space":"22","status":"occupied","rate_monthly":137.5},{"id":"B-23","building":"B","space":"23","status":"occupied","rate_monthly":137.5},{"id":"B-24","building":"B","space":"24","status":"occupied","rate_monthly":137.5},{"id":"B-25","building":"B","space":"25","status":"occupied","rate_monthly":137.5},{"id":"B-26","building":"B","space":"26","status":"occupied","rate_monthly":137.5},{"id":"B-27","building":"B","space":"27","status":"occupied","rate_monthly":137.5},{"id":"B-28","building":"B","space":"28","status":"occupied","rate_monthly":137.5},{"id":"B-29","building":"B","space":"29","status":"occupied","rate_monthly":137.5},{"id":"B-30","building":"B","space":"30","status":"occupied","rate_monthly":137.5},{"id":"B-31","building":"B","space":"31","status":"occupied","rate_monthly":137.5},{"id":"B-32","building":"B","space":"32","status":"occupied","rate_monthly":137.5},{"id":"B-33","building":"B","space":"33","status":"occupied","rate_monthly":137.5},{"id":"B-34","building":"B","space":"34","status":"occupied","rate_monthly":137.5},{"id":"B-35","building":"B","space":"35","status":"occupied","rate_monthly":137.5},{"id":"B-36","building":"B","space":"36","status":"occupied","rate_monthly":137.5},{"id":"B-37","building":"B","space":"37","status":"occupied","rate_monthly":137.5},{"id":"B-38","building":"B","space":"38","status":"vacant","rate_monthly":137.5},{"id":"B-39","building":"B","space":"39","status":"vacant","rate_monthly":137.5},{"id":"B-40","building":"B","space":"40","status":"occupied","rate_monthly":137.5},{"id":"B-41","building":"B","space":"41","status":"occupied","rate_monthly":137.5},{"id":"B-42a","building":"B","space":"42a","status":"occupied","rate_monthly":137.5},{"id":"B-42b","building":"B","space":"42b","status":"occupied","rate_monthly":137.5},{"id":"B-43","building":"B","space":"43","status":"occupied","rate_monthly":137.5},{"id":"B-44","building":"B","space":"44","status":"occupied","rate_monthly":137.5},{"id":"B-45","building":"B","space":"45","status":"occupied","rate_monthly":137.5},{"id":"B-46","building":"B","space":"46","status":"occupied","rate_monthly":137.5},{"id":"B-47","building":"B","space":"47","status":"occupied","rate_monthly":137.5},{"id":"B-48","building":"B","space":"48","status":"occupied","rate_monthly":137.5},{"id":"B-49","building":"B","space":"49","status":"occupied","rate_monthly":137.5},{"id":"E-1","building":"E","space":"1","status":"occupied","rate_monthly":165.0},{"id":"E-2","building":"E","space":"2","status":"occupied","rate_monthly":165.0},{"id":"E-3","building":"E","space":"3","status":"occupied","rate_monthly":165.0},{"id":"E-4","building":"E","space":"4","status":"occupied","rate_monthly":165.0},{"id":"E-5","building":"E","space":"5","status":"occupied","rate_monthly":165.0},{"id":"E-6","building":"E","space":"6","status":"occupied","rate_monthly":165.0},{"id":"E-7","building":"E","space":"7","status":"occupied","rate_monthly":165.0},{"id":"E-8","building":"E","space":"8","status":"occupied","rate_monthly":165.0},{"id":"E-9","building":"E","space":"9","status":"occupied","rate_monthly":165.0},{"id":"E-10","building":"E","space":"10","status":"occupied","rate_monthly":165.0},{"id":"F-1","building":"F","space":"1","status":"occupied","rate_monthly":192.5},{"id":"F-2","building":"F","space":"2","status":"occupied","rate_monthly":192.5},{"id":"F-3","building":"F","space":"3","status":"occupied","rate_monthly":192.5},{"id":"F-4","building":"F","space":"4","status":"occupied","rate_monthly":192.5},{"id":"F-5","building":"F","space":"5","status":"occupied","rate_monthly":192.5},{"id":"F-6","building":"F","space":"6","status":"occupied","rate_monthly":192.5},{"id":"F-7","building":"F","space":"7","status":"occupied","rate_monthly":192.5},{"id":"F-8","building":"F","space":"8","status":"occupied","rate_monthly":192.5},{"id":"F-9","building":"F","space":"9","status":"occupied","rate_monthly":192.5},{"id":"F-10","building":"F","space":"10","status":"occupied","rate_monthly":192.5},{"id":"F-11","building":"F","space":"11","status":"occupied","rate_monthly":192.5},{"id":"F-12","building":"F","space":"12","status":"occupied","rate_monthly":192.5},{"id":"F-13","building":"F","space":"13","status":"occupied","rate_monthly":192.5},{"id":"F-14","building":"F","space":"14","status":"occupied","rate_monthly":192.5},{"id":"G-1","building":"G","space":"1","status":"occupied","rate_monthly":165.0},{"id":"G-2","building":"G","space":"2","status":"occupied","rate_monthly":165.0},{"id":"G-3","building":"G","space":"3","status":"occupied","rate_monthly":82.5},{"id":"G-4","building":"G","space":"4","status":"occupied","rate_monthly":165.0},{"id":"G-5","building":"G","space":"5","status":"occupied","rate_monthly":165.0},{"id":"G-6","building":"G","space":"6","status":"occupied","rate_monthly":165.0},{"id":"G-7","building":"G","space":"7","status":"occupied","rate_monthly":165.0},{"id":"G-8","building":"G","space":"8","status":"occupied","rate_monthly":165.0},{"id":"G-9","building":"G","space":"9","status":"occupied","rate_monthly":165.0},{"id":"G-10","building":"G","space":"10","status":"occupied","rate_monthly":165.0},{"id":"G-11","building":"G","space":"11","status":"occupied","rate_monthly":165.0},{"id":"G-12","building":"G","space":"12","status":"occupied","rate_monthly":165.0},{"id":"H-1","building":"H","space":"1","status":"occupied","rate_monthly":275.0},{"id":"H-2","building":"H","space":"2","status":"occupied","rate_monthly":275.0},{"id":"H-3","building":"H","space":"3","status":"occupied","rate_monthly":275.0},{"id":"H-4","building":"H","space":"4","status":"occupied","rate_monthly":275.0},{"id":"H-5","building":"H","space":"5","status":"occupied","rate_monthly":275.0},{"id":"H-6","building":"H","space":"6","status":"occupied","rate_monthly":275.0},{"id":"H-7","building":"H","space":"7","status":"occupied","rate_monthly":275.0},{"id":"H-8","building":"H","space":"8","status":"occupied","rate_monthly":275.0},{"id":"I-1","building":"I","space":"1","status":"occupied","rate_monthly":275.0},{"id":"I-2","building":"I","space":"2","status":"occupied","rate_monthly":275.0},{"id":"J-1","building":"J","space":"1","status":"occupied","rate_monthly":115.0},{"id":"J-2-A","building":"J","space":"2-A","status":"vacant","rate_monthly":115.0},{"id":"J-3-A","building":"J","space":"3-A","status":"occupied","rate_monthly":115.0},{"id":"J-4","building":"J","space":"4","status":"occupied","rate_monthly":115.0},{"id":"J-4-A","building":"J","space":"4-A","status":"vacant","rate_monthly":115.0},{"id":"J-5","building":"J","space":"5","status":"occupied","rate_monthly":115.0},{"id":"J-5-A","building":"J","space":"5-A","status":"vacant","rate_monthly":115.0},{"id":"J-6","building":"J","space":"6","status":"occupied","rate_monthly":115.0},{"id":"J-7","building":"J","space":"7","status":"occupied","rate_monthly":115.0},{"id":"J-8","building":"J","space":"8","status":"occupied","rate_monthly":115.0},{"id":"J-9","building":"J","space":"9","status":"occupied","rate_monthly":115.0},{"id":"J-10","building":"J","space":"10","status":"occupied","rate_monthly":115.0},{"id":"J-11","building":"J","space":"11","status":"occupied","rate_monthly":115.0},{"id":"J-12","building":"J","space":"12","status":"occupied","rate_monthly":115.0},{"id":"J-13","building":"J","space":"13","status":"occupied","rate_monthly":115.0},{"id":"L-1","building":"L","space":"1","status":"occupied","rate_monthly":90.0},{"id":"L-2","building":"L","space":"2","status":"occupied","rate_monthly":90.0},{"id":"L-3","building":"L","space":"3","status":"occupied","rate_monthly":90.0},{"id":"L-4","building":"L","space":"4","status":"occupied","rate_monthly":90.0},{"id":"L-5","building":"L","space":"5","status":"occupied","rate_monthly":90.0},{"id":"L-6","building":"L","space":"6","status":"occupied","rate_monthly":90.0},{"id":"L-8","building":"L","space":"8","status":"occupied","rate_monthly":90.0},{"id":"L-9","building":"L","space":"9","status":"occupied","rate_monthly":90.0},{"id":"L-10","building":"L","space":"10","status":"occupied","rate_monthly":90.0},{"id":"L-11","building":"L","space":"11","status":"occupied","rate_monthly":90.0},{"id":"L-12","building":"L","space":"12","status":"occupied","rate_monthly":90.0},{"id":"L-13","building":"L","space":"13","status":"occupied","rate_monthly":60.0},{"id":"L-14","building":"L","space":"14","status":"occupied","rate_monthly":60.0},{"id":"L-15","building":"L","space":"15","status":"occupied","rate_monthly":60.0},{"id":"L-16","building":"L","space":"16","status":"occupied","rate_monthly":60.0},{"id":"L-17","building":"L","space":"17","status":"occupied","rate_monthly":60.0},{"id":"L-18","building":"L","space":"18","status":"occupied","rate_monthly":60.0},{"id":"L-19","building":"L","space":"19","status":"occupied","rate_monthly":60.0},{"id":"L-20","building":"L","space":"20","status":"occupied","rate_monthly":60.0},{"id":"L-21","building":"L","space":"21","status":"occupied","rate_monthly":60.0},{"id":"L-22","building":"L","space":"22","status":"occupied","rate_monthly":60.0},{"id":"M-1","building":"M","space":"1","status":"occupied","rate_monthly":250.0},{"id":"M-2","building":"M","space":"2","status":"occupied","rate_monthly":250.0},{"id":"M-3","building":"M","space":"3","status":"occupied","rate_monthly":250.0},{"id":"M-4","building":"M","space":"4","status":"occupied","rate_monthly":250.0},{"id":"M-5","building":"M","space":"5","status":"occupied","rate_monthly":250.0},{"id":"M-6","building":"M","space":"6","status":"occupied","rate_monthly":250.0},{"id":"M-7","building":"M","space":"7","status":"occupied","rate_monthly":250.0},{"id":"M-8","building":"M","space":"8","status":"occupied","rate_monthly":250.0},{"id":"N-1","building":"N","space":"1","status":"occupied","rate_monthly":137.5},{"id":"N-2","building":"N","space":"2","status":"occupied","rate_monthly":137.5},{"id":"N-3","building":"N","space":"3","status":"occupied","rate_monthly":137.5},{"id":"N-4","building":"N","space":"4","status":"occupied","rate_monthly":137.5},{"id":"N-5","building":"N","space":"5","status":"occupied","rate_monthly":137.5},{"id":"N-6","building":"N","space":"6","status":"occupied","rate_monthly":0.0},{"id":"N-7","building":"N","space":"7","status":"vacant","rate_monthly":137.5},{"id":"N-8","building":"N","space":"8","status":"occupied","rate_monthly":150.0},{"id":"N-9","building":"N","space":"9","status":"occupied","rate_monthly":137.5},{"id":"N-10","building":"N","space":"10","status":"occupied","rate_monthly":137.5},{"id":"N-11","building":"N","space":"11","status":"occupied","rate_monthly":137.5},{"id":"N-12","building":"N","space":"12","status":"occupied","rate_monthly":137.5},{"id":"N-13","building":"N","space":"13","status":"occupied","rate_monthly":137.5},{"id":"N-14","building":"N","space":"14","status":"occupied","rate_monthly":137.5},{"id":"N-15","building":"N","space":"15","status":"occupied","rate_monthly":137.5},{"id":"N-16","building":"N","space":"16","status":"vacant","rate_monthly":137.5},{"id":"N-17","building":"N","space":"17","status":"occupied","rate_monthly":137.5},{"id":"N-18","building":"N","space":"18","status":"occupied","rate_monthly":137.5},{"id":"N-19","building":"N","space":"19","status":"occupied","rate_monthly":137.5},{"id":"N-20","building":"N","space":"20","status":"occupied","rate_monthly":137.5},{"id":"N-21","building":"N","space":"21","status":"occupied","rate_monthly":137.5},{"id":"N-22","building":"N","space":"22","status":"occupied","rate_monthly":137.5},{"id":"N-23","building":"N","space":"23","status":"occupied","rate_monthly":137.5},{"id":"N-24","building":"N","space":"24","status":"occupied","rate_monthly":137.5},{"id":"N-25","building":"N","space":"25","status":"occupied","rate_monthly":137.5},{"id":"N-26","building":"N","space":"26","status":"occupied","rate_monthly":137.5},{"id":"N-27","building":"N","space":"27","status":"occupied","rate_monthly":137.5},{"id":"N-28","building":"N","space":"28","status":"occupied","rate_monthly":137.5},{"id":"N-29","building":"N","space":"29","status":"occupied","rate_monthly":137.5},{"id":"N-30","building":"N","space":"30","status":"occupied","rate_monthly":137.5},{"id":"N-31","building":"N","space":"31","status":"occupied","rate_monthly":137.5},{"id":"N-32","building":"N","space":"32","status":"occupied","rate_monthly":137.5},{"id":"N-35","building":"N","space":"35","status":"occupied","rate_monthly":137.5},{"id":"N-36","building":"N","space":"36","status":"occupied","rate_monthly":137.5},{"id":"N-37","building":"N","space":"37","status":"occupied","rate_monthly":137.5},{"id":"N-38","building":"N","space":"38","status":"occupied","rate_monthly":137.5},{"id":"N-39","building":"N","space":"39","status":"occupied","rate_monthly":137.5},{"id":"N-40","building":"N","space":"40","status":"occupied","rate_monthly":137.5},{"id":"O-1","building":"O","space":"1","status":"vacant","rate_monthly":137.5},{"id":"O-2","building":"O","space":"2","status":"occupied","rate_monthly":137.5},{"id":"O-3","building":"O","space":"3","status":"occupied","rate_monthly":137.5},{"id":"O-4","building":"O","space":"4","status":"occupied","rate_monthly":137.5},{"id":"O-5","building":"O","space":"5","status":"occupied","rate_monthly":137.5},{"id":"O-6","building":"O","space":"6","status":"occupied","rate_monthly":137.5},{"id":"O-7","building":"O","space":"7","status":"occupied","rate_monthly":137.5},{"id":"O-8","building":"O","space":"8","status":"occupied","rate_monthly":137.5},{"id":"O-9","building":"O","space":"9","status":"occupied","rate_monthly":137.5},{"id":"O-10","building":"O","space":"10","status":"occupied","rate_monthly":137.5},{"id":"O-11","building":"O","space":"11","status":"occupied","rate_monthly":137.5},{"id":"O-12","building":"O","space":"12","status":"occupied","rate_monthly":137.5},{"id":"O-13","building":"O","space":"13","status":"occupied","rate_monthly":165.0},{"id":"O-14","building":"O","space":"14","status":"vacant","rate_monthly":165.0},{"id":"O-15","building":"O","space":"15","status":"occupied","rate_monthly":165.0},{"id":"O-16","building":"O","space":"16","status":"occupied","rate_monthly":165.0},{"id":"O-17","building":"O","space":"17","status":"occupied","rate_monthly":165.0},{"id":"O-18","building":"O","space":"18","status":"occupied","rate_monthly":165.0},{"id":"O-19","building":"O","space":"19","status":"occupied","rate_monthly":165.0},{"id":"O-20","building":"O","space":"20","status":"vacant","rate_monthly":165.0},{"id":"P-1","building":"P","space":"1","status":"occupied","rate_monthly":275.0},{"id":"P-2","building":"P","space":"2","status":"occupied","rate_monthly":275.0},{"id":"P-3","building":"P","space":"3","status":"occupied","rate_monthly":275.0},{"id":"P-4","building":"P","space":"4","status":"occupied","rate_monthly":275.0},{"id":"P-5","building":"P","space":"5","status":"occupied","rate_monthly":275.0},{"id":"P-6","building":"P","space":"6","status":"occupied","rate_monthly":275.0},{"id":"P-7","building":"P","space":"7","status":"occupied","rate_monthly":275.0},{"id":"P-8","building":"P","space":"8","status":"occupied","rate_monthly":275.0},{"id":"P-9","building":"P","space":"9","status":"occupied","rate_monthly":275.0},{"id":"P-10","building":"P","space":"10","status":"occupied","rate_monthly":275.0},{"id":"P-11","building":"P","space":"11","status":"occupied","rate_monthly":275.0},{"id":"P-12","building":"P","space":"12","status":"occupied","rate_monthly":275.0},{"id":"P-13","building":"P","space":"13","status":"occupied","rate_monthly":275.0},{"id":"P-14","building":"P","space":"14","status":"occupied","rate_monthly":275.0},{"id":"P-15","building":"P","space":"15","status":"occupied","rate_monthly":275.0},{"id":"P-16","building":"P","space":"16","status":"occupied","rate_monthly":275.0},{"id":"P-17","building":"P","space":"17","status":"occupied","rate_monthly":275.0}]};
+
+/* hero — slow crossfade through the shoot's three strongest frames */
+(() => {
+  const imgs = [...document.querySelectorAll("#heromedia img")];
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches || imgs.length < 2) return;
+  imgs.forEach(im => { if (im.dataset.src) { im.src = im.dataset.src; delete im.dataset.src; } });
+  let i = 0;
+  setInterval(() => {
+    imgs[i].classList.remove("on");
+    i = (i + 1) % imgs.length;
+    imgs[i].classList.add("on");
+  }, 7000);
+})();
+
+/* film strip — load + play clips only when they scroll into view */
+(() => {
+  const vids = [...document.querySelectorAll("#strip video")];
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    const v = e.target;
+    if (e.isIntersecting) {
+      if (v.dataset.src) { v.src = v.dataset.src; delete v.dataset.src; }
+      if (!reduced) v.play().catch(()=>{});
+    } else if (!v.paused) v.pause();
+  }), {rootMargin: "120px", threshold: .25});
+  vids.forEach(v => io.observe(v));
+})();
+
+/* collection lightbox */
+document.querySelectorAll("#gal figure").forEach(f => f.onclick = () => {
+  const lb = document.getElementById("lightbox");
+  document.getElementById("lb-img").src = f.querySelector("img").src;
+  document.getElementById("lb-img").alt = f.querySelector("img").alt;
+  lb.classList.add("open");
+});
+addEventListener("keydown", e => { if (e.key === "Escape") document.getElementById("lightbox").classList.remove("open"); });
+
+/* rate-card classes */
+const CLASSES = [
+  {key:"grand", name:"Grand Bays", bldgs:["P","H","I","M"], img:"media/coach-bays.jpg", spec:"Stalls to 14' × 50' · 12'w × 14'h private doors · rear-gate remotes", tag:"Motor coaches · 40'+ RVs · big cruisers"},
+  {key:"tall", name:"Tall-Boat Bays", bldgs:["F"], img:"media/rows-doors.jpg", spec:"14' × 40' stalls · 12'w × 14'h private doors", tag:"Fly bridges · wake towers · tall rigs"},
+  {key:"priv", name:"Private Stalls", bldgs:["E","G"], img:"media/class-priv.jpg", spec:"12' × 36' stalls · 10'w × 12'h private doors", tag:"Ski boats · runabouts to ~26'"},
+  {key:"floor", name:"The Boat House Floor", bldgs:["B","N","O"], img:"media/class-floor.jpg", spec:"Spaces 9'×15' up to 15'×48' · shared indoor floor · valet-friendly", tag:"Boats to ~29' · jet skis · best value indoors"},
+  {key:"garage", name:"The Bollinger Garage", bldgs:["J"], img:"media/collection-classic.jpg", spec:"8'6\" roll-up doors · no wake towers", tag:"Classic cars · small craft"},
+  {key:"yard", name:"The Yard", bldgs:["L"], img:"media/class-yard.jpg", spec:"Gated outside parking · 2614 Samford", tag:"Trailers · rigs · overflow"},
+];
+const byB = {};
+DATA.spaces.forEach(s => (byB[s.building] = byB[s.building] || []).push(s));
+
+const fmt = n => "$" + (n % 1 ? n.toFixed(2) : n.toLocaleString());
+
+let total = 0, avail = 0;
+DATA.spaces.forEach(s => { total++; if (s.status === "vacant") avail++; });
+document.getElementById("stat-spaces").textContent = total;
+document.getElementById("stat-avail").textContent = avail;
+
+/* longevity — aggregate ledger stats injected at build time */
+if (DATA.stats) {
+  document.getElementById("lg-avg").textContent = DATA.stats.avg_years;
+  document.getElementById("lg-ten").textContent = DATA.stats.ten_plus;
+  document.getElementById("lg-long").textContent = DATA.stats.longest;
+  document.getElementById("lg-since").textContent = DATA.stats.since;
+}
+
+/* rate cards */
+const rc = document.getElementById("ratecards");
+CLASSES.forEach(c => {
+  const sp = c.bldgs.flatMap(b => byB[b] || []);
+  /* advertised rates = a building's standard tiers (≥25% of its stalls), never one-off legacy/split rates */
+  const std = [];
+  c.bldgs.forEach(b => {
+    const bs = byB[b] || [], freq = {};
+    bs.forEach(s => freq[s.rate_monthly] = (freq[s.rate_monthly] || 0) + 1);
+    Object.entries(freq).forEach(([r, n]) => { if (n >= Math.max(2, bs.length * .25)) std.push(+r); });
+  });
+  const rates = [...new Set(std.length ? std : sp.map(s => s.rate_monthly))].sort((a,b)=>a-b);
+  const open = sp.filter(s => s.status === "vacant").length;
+  const price = rates.length > 1 ? `${fmt(rates[0])}–${fmt(rates[rates.length-1])}` : fmt(rates[0] || 0);
+  const el = document.createElement("div");
+  el.className = "card";
+  el.innerHTML = `<img class="ph" loading="lazy" decoding="async" src="${c.img}" alt="${c.name}">
+    <div class="body"><div class="cls">${c.tag}</div><h3>${c.name}</h3>
+    <div class="spec">${c.spec}<br>Buildings ${c.bldgs.join(" · ")}</div>
+    <div class="price">${price}<small> / month</small></div>
+    <div class="avail ${open ? "yes" : "no"}"><span class="dot"></span>${open ? open + " open now — see the map" : "Full — tap to join the waitlist"}</div></div>`;
+  el.style.cursor = "pointer";
+  el.onclick = () => {
+    if (open) {
+      document.getElementById("map").scrollIntoView({behavior:"smooth"});
+    } else {
+      document.getElementById("f-space").value = `WAITLIST — ${c.name}`;
+      document.getElementById("reserve").scrollIntoView({behavior:"smooth"});
+    }
+  };
+  rc.appendChild(el);
+});
+
+/* facility map */
+const ADDRS = [
+  {addr:"2502 Samford Avenue — Main Facility", bldgs:["P","H","I","M","F","G","E","B","N","O"]},
+  {addr:"1332 Bollinger Avenue — The Garage", bldgs:["J"]},
+  {addr:"2614 Samford Avenue — The Yard", bldgs:["L"]},
+];
+const fm = document.getElementById("facmap");
+ADDRS.forEach(g => {
+  const grp = document.createElement("div");
+  grp.className = "addr-group";
+  grp.innerHTML = `<div class="addr">${g.addr}</div>`;
+  const grid = document.createElement("div");
+  grid.className = "bgrid";
+  g.bldgs.forEach(bc => {
+    const meta = DATA.buildings[bc], sp = byB[bc] || [];
+    if (!sp.length) return;
+    const bl = document.createElement("div");
+    bl.className = "bldg";
+    const cols = sp.length > 30 ? 10 : sp.length > 12 ? 7 : Math.min(sp.length, 5);
+    bl.innerHTML = `<h4>${meta.label}</h4><div class="sub">${meta.door} · ${meta.depth}</div>`;
+    const st = document.createElement("div");
+    st.className = "stalls";
+    st.style.gridTemplateColumns = `repeat(${cols}, 34px)`;
+    sp.forEach(s => {
+      const d = document.createElement("div");
+      d.className = "stall" + (s.status === "vacant" ? " vac" : "");
+      d.textContent = s.space;
+      d.title = `${s.id} — ${s.status}`;
+      d.onclick = () => openDrawer(s, d);
+      st.appendChild(d);
+    });
+    bl.appendChild(st);
+    grid.appendChild(bl);
+  });
+  grp.appendChild(grid);
+  fm.appendChild(grp);
+});
+
+/* drawer */
+let selEl = null;
+function openDrawer(s, el) {
+  if (selEl) selEl.classList.remove("sel");
+  selEl = el; el.classList.add("sel");
+  const m = DATA.buildings[s.building];
+  const cls = CLASSES.find(c => c.bldgs.includes(s.building));
+  document.getElementById("d-cls").textContent = cls ? cls.name : m.label;
+  document.getElementById("d-id").textContent = "Stall " + s.id;
+  const vac = s.status === "vacant";
+  const st = document.getElementById("d-st");
+  st.textContent = vac ? "● Available now" : "Occupied";
+  st.className = "st " + (vac ? "vac" : "occ");
+  document.getElementById("d-door").textContent = m.door;
+  document.getElementById("d-depth").textContent = m.depth;
+  document.getElementById("d-rate").textContent = fmt(s.rate_monthly) + " / month";
+  document.getElementById("d-addr").textContent = m.address;
+  const btn = document.getElementById("d-btn");
+  btn.textContent = vac ? "Apply for " + s.id : "Join waitlist for this class";
+  if (vac) {
+    btn.href = `application.html?space=${encodeURIComponent(s.id)}&rate=${encodeURIComponent(fmt(s.rate_monthly))}`;
+    btn.onclick = null;
+  } else {
+    btn.href = "#reserve";
+    btn.onclick = () => {
+      document.getElementById("f-space").value = `Waitlist — ${cls ? cls.name : m.label}`;
+      closeDrawer();
+    };
+  }
+  document.getElementById("drawer").classList.add("open");
+}
+function closeDrawer(){ document.getElementById("drawer").classList.remove("open"); if (selEl) selEl.classList.remove("sel"); }
+
+/* form → email handoff (Supabase inbox replaces this at HQ launch) */
+document.getElementById("resform").addEventListener("submit", e => {
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const body = ["New reservation request — The Boat House website", "",
+    "Name: " + f.get("name"), "Phone: " + f.get("phone"), "Email: " + (f.get("email") || "—"),
+    "Storing: " + f.get("kind") + (f.get("length") ? ` (${f.get("length")} ft)` : ""),
+    "Preferred space: " + (f.get("space") || "no preference"),
+    "Notes: " + (f.get("msg") || "—")].join("\n");
+  const isWL = (f.get("space") || "").toUpperCase().startsWith("WAITLIST");
+  location.href = "mailto:samford@freesllc.com?subject=" +
+    encodeURIComponent((isWL ? "Waitlist request — " : "Stall reservation request — ") + f.get("name")) +
+    "&body=" + encodeURIComponent(body);
+});
+</script>
+</body>
+</html>
